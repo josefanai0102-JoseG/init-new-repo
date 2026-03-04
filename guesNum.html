@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        body{
+    display: block;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+.container{
+    display: inline-block;
+    margin-top: 50px;
+    background-image: linear-gradient(to top right, grey,rgb(190, 190, 173), lightgreen);
+    padding: 20px;
+    border-radius: 10px;
+    width: 580px;
+}
+h1{
+    color: #0a7c5a;
+}
+#guessInput{
+    padding: 10px;
+    font-size: 16px;
+    width: auto;
+    border: none;
+    border-radius: 10px;
+}
+/* Chrome, Safari, Edge, leh Opera browser te tan */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button{
+     -webkit-appearance: none;
+}
+@media (max-width: 600px){
+    .container{
+        width: 90%;
+        flex-direction: column;
+    }
+}
+#btn-click{
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0a7c5a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#btn-click:hover{
+    background-color: #3cc943;
+    color: white;
+    transition: all 0.3s ease;
+    transform: scale(1.15);
+}
+
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Guess the Number between 1 and 100</h1>
+    <input type="number" id="guessInput" placeholder="Enter your guess"><br><br>
+    <button onclick="checkGuess()" id="btn-click">Submit Guess</button><br><br>
+    <div id="output"></div></body></div>
+    <script src="NumberGuessing.js">
+</script>
+</body>
+</html>
